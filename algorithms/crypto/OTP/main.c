@@ -143,5 +143,5 @@ int main(int argc, char *argv[]) {
 	free(random_data);
 	free(decrypted);
 	free(key);
-	return -1;
+	return 0;
 }
