@@ -86,8 +86,8 @@ int main(void) {
 	singly_linked_list_push_end(head, "coucou");
 	singly_linked_list_push_end(head, "lol");
 	singly_linked_list_push_end(head, "poil");
-	singly_linked_list_push_front(&head, "enculer");
-	singly_linked_list_push_front(&head, "salaud");
+	singly_linked_list_push_front(&head, "Git");
+	singly_linked_list_push_front(&head, "Git");
 	singly_linked_list_push_front(&head, "mougaga");
 	singly_linked_list_do(head, &print);
 	singly_linked_list_pop(&head);
