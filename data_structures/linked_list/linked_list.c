@@ -96,6 +96,5 @@ int main(void) {
 	printf("removelast\n");
 	singly_linked_list_remove_last(head);
 	singly_linked_list_do(head, &print);
-	free_singly_linked_list(head);
 	return 0;
 }
