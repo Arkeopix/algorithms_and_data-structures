@@ -10,9 +10,21 @@ static const char ALPHABETUP[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 /* the % operator defined inc c99 is in fact: not a modulo operator but a remainder operator*/
 /* ie: -1 % 26 returns -1 instead of 25 */
 /* so i had to write my modulo function */
-static int modulo(int a, int b) {
+static int modulo(const int a, const int b) {
     int r = a % b;
     return r < 0 ? r + b : r;
+}
+
+static void trim_spaces(char *s) {
+	char *i = s, *j = s;
+
+	while (*j != '\0') {
+		*i = *j++;
+		if (*i != ' ') {
+			i++;
+		}
+	}
+	*i = '\0';
 }
 
 int main(int argc, char *argv[]) {
@@ -46,6 +58,7 @@ int main(int argc, char *argv[]) {
 		}
 	}
 	cipher[strlen(argv[1])] = '\0';
+	trim_spaces(cipher);
 	printf("encrypted string is:\t%s\n", cipher);
 
 	printf("unencrypted string is:\t");
