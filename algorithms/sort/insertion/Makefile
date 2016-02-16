@@ -1,7 +1,7 @@
 SRC 	= main.c
 OBJ 	= ${SRC:.c=.o}
 NAME 	= insertion_sort
-CFLAGS 	= -std=c99 -pedantic -Wall -Werror -Wextra -Wunused
+CFLAGS 	= -std=c99 -pedantic -Wunused
 ${NAME}:  	${OBJ}
 		  	${CC} ${OBJ} ${CFLAGS} -o ${NAME}
 all:      	${NAME}
